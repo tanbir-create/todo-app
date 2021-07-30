@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+html {
+    box-sizing: border-box;
+    
+  }
+  ::-webkit-scrollbar {
+    display: none;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* background-color: rgba(69,182,212,255); */
+    /* background-color: aliceblue; */
+}
+
+input, textarea, button, select {font-family: inherit; color: #495057;}
+
+/* .bg {
+    
+    background-image: url("https://media.istockphoto.com/photos/timeline-planning-checklist-or-business-plan-with-calendar-date-on-picture-id1211255735?k=6&m=1211255735&s=612x612&w=0&h=P0HukhuiegaRd5UHLwcnRgAlSUP5tQTUcCLKyNm5uNk=");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100vh;
+    opacity: .7;    
+} */
+
+#app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    /* border: 3px solid black; */
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    height: 100%;
+    margin-top: 1.171875rem;
+    margin-bottom: 1.171875rem;
+    border-radius: 15px;
+    background-color:#f8f9fa;
+    overflow: auto;
+
+}
+
+#page-heading{
+    text-align: center;
+    margin-top: 30px;
+    color: rgb(54,69,79);
+    min-width: 23vw;
+}
+
+/* background-image: linear-gradient(to right, #2193b0, #6dd5ed); */
+
+#input_form{
+    width: 69%;
+    
+    
+    /* flex-direction: column; */
+}
+
+#new-task-form{
+    color: #495057;
+}
+
+#task-input{
+     
+
+}
+
+
+
+#task-input-area{
+    min-height: 40px;
+    width: 100%;
+    /* line-height: 3; */
+    font: 400 1rem 'Josefin Sans', sans-serif;
+   
+
+    padding-left: .725rem;
+    color: #495057;
+  
+    
+}
+#task-input-area:focus{
+    font: 400 1rem 'Josefin Sans', sans-serif;
+    color: #495057;
+}
+
+::placeholder{
+  
+    font-size: .95rem;
+    
+}
+
+#cat-date{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#category{
+    width: 47%;
+    min-height: 40px;
+    padding-left: .525rem;
+    font-size: .925rem;
+    cursor: pointer;
+    margin-right: 10px;
+    
+}
+
+
+#due_date-input{
+ 
+   cursor: pointer;
+  
+   /* padding: 0 .625rem; */
+}
+#due_date-input:focus{
+    padding: .6rem;
+}
+
+input.large { display: inline-block; }
+input.small { display: none; }
+.place-icon{
+    font-family: fontawesome;
+}
+input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    /* background-image: url(''); */
+  }
+
+
+#add-task-button{
+    display: flex;
+    justify-content: center;
+    margin-top: .7rem;
+    min-height: 40px;
+    
+}
+button{
+    font-weight: 600;
+    font-size: 1rem;
+    width: 40%;
+    cursor: pointer;
+    border: none;
+    color: whitesmoke;
+    word-spacing: .15rem;   
+    box-shadow: 0 .185rem .25rem rgba(0,0,0,.4);
+    background-color: #008ECC;
+    border-radius: .45rem;
+    transition: .2s;
+
+}
+
+button:hover{
+    background-color:aliceblue;
+    color: black;
+    transform: scale(1.02);
+}
+
+/* input{
+    
+    /* border-style: groove; */
+    /* background-color: aliceblue; */
+  
+    
+/* }  */
+
+
+
+/* select::-webkit-outer-spin-button,
+select::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+
+.input-items{
+    margin: .7rem .5rem 0 0;
+    border: none ;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.2);
+    
+    border-radius: .45rem;
+    transition: .3s;
+}
+.input-items:focus{
+    outline: none;
+    box-shadow: 0 0 5px #008ECC;
+   
+      border: 1px solid #008ECC; 
+}
+
+
+.line-between{
+    margin-top: 1.7rem;
+    width: 80%;
+    border-bottom: 1.57px solid #b2b7c5;
+    
+    
+}
+.line-between-li{
+    margin-top: 1.7rem;
+    width: 100%;
+    border-bottom: 1px solid #dee2e6;
+}
+
+#task-container{
+    width: 69%;
+    font-family: sans-serif;
+    color:#444444;
+}
+#todo-list{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+
+}
+#todo-list li{
+    width: 100%;
+    margin-top: .7rem;
+}
+
+.flex-details{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.checkbox-div{
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.completed-checkbox{
+    margin: 0;
+    height: 1.3rem;
+    width: 1.3rem;
+    transition: .25s;
+}
+
+.completed-checkbox:hover{
+    cursor: pointer;
+    transform: scale(1.15)
+}
+
+
+.task-text{
+    grid-area: t-text;
+    font-size: 1.5em;
+    word-break: break-word;
+
+
+}
+.task-date{
+    grid-area: date;
+    margin-top: .8rem;
+}
+.task-category{
+    grid-area: category;
+    color: #495057;
+    /* text-align: center;
+    vertical-align: middle;
+    line-height: inherit; */
+    margin-right: 5px;
+    /* text-align: right;
+    vertical-align: middle; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+
+}
+.details{
+    margin-left: .7rem;
+    width: 90%; 
+    position: relative;
+    display: grid;
+    grid-template-areas: 't-text t-text t-text category'
+                           'date date date date' ;
+}
+
+
+.delete-container {
+    text-align: center;
+    
+    min-height: 50px;
+    height: inherit;
+    
+    min-width: 50px;
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    transition: transform .6s ease-in-out;
+
+}
+
+.delete-task-button i{
+    font-size: 1.5em;
+    color: #434343;
+}
+
+
+
+.delete-task-button:hover{
+    cursor: pointer;
+    transform: scale(1.15);
+}
+
+.completedc{
+    opacity: .35;
+}
+.sim{
+    opacity: 1;
+}
+
+@media only screen and (max-width: 600px) {
+    #input_form{
+        width: 90%;
+    }
+    #task-container{
+        width: 90%;
+    }
+    
+    #due_date-input{
+        width: 35%;
+    }
+    #due_date-input::placeholder{
+        font-size: .95rem;
+    }
+    input.large { display: none; }
+    input.small { display: inline-block; }
+
+    
+  }
