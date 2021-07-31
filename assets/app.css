@@ -262,7 +262,7 @@ select::-webkit-inner-spin-button {
 
 .task-text{
     grid-area: t-text;
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     word-break: break-word;
     margin-right: 5px;
 
