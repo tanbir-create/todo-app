@@ -30,9 +30,8 @@ app.post('/new_todo', async (req, res)=>{
         if(req.body.category !== "Choose Category"){
             category =  req.body.category
         }
-        var due_date = req.body.due_date[1];
-        console.log(req.body.due_date)
-        if(req.body.due_date[1] === ""){
+        var due_date = req.body.due_date;
+        if(req.body.due_date[0] === "" && req.body.due_date[1] === ""){
             due_date = new Date();
         }
         let newTask = await ToDo.create({
