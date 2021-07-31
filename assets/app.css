@@ -7,8 +7,9 @@ html {
   ::-webkit-scrollbar {
     display: none;
 }
-*, *:before, *:after {
+*{
     box-sizing: inherit;
+    -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -44,7 +45,8 @@ input, textarea, button, select {font-family: inherit; color: #495057;}
     margin-bottom: 1.171875rem;
     border-radius: 15px;
     background-color:#f8f9fa;
-    overflow: auto;
+    overflow-y: scroll;
+   
 
 }
 
@@ -58,7 +60,7 @@ input, textarea, button, select {font-family: inherit; color: #495057;}
 /* background-image: linear-gradient(to right, #2193b0, #6dd5ed); */
 
 #input_form{
-    width: 55%;
+    width: 90%;
     
     
     /* flex-direction: column; */
@@ -115,7 +117,7 @@ input, textarea, button, select {font-family: inherit; color: #495057;}
 
 
 #due_date-input{
- 
+    width: 35%;
    cursor: pointer;
   
    /* padding: 0 .625rem; */
@@ -124,8 +126,8 @@ input, textarea, button, select {font-family: inherit; color: #495057;}
     padding: .6rem;
 }
 
-input.large { display: inline-block; }
-input.small { display: none; }
+input.large { display: none; }
+input.small { display: inline-block; }
 .place-icon{
     font-family: fontawesome;
 }
@@ -205,7 +207,7 @@ select::-webkit-inner-spin-button {
 }
 
 #task-container{
-    width: 55%;
+    width: 90%;
 
     color:#444444;
 }
@@ -324,24 +326,30 @@ select::-webkit-inner-spin-button {
     opacity: 1;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
     #input_form{
-        width: 90%;
+        width: 55%;
     }
     #task-container{
-        width: 90%;
+        width: 55%;
     }
     
     #due_date-input{
-        width: 35%;
+        width: auto;
     }
     #due_date-input::placeholder{
         font-size: .95rem;
     }
-    input.large { display: none; }
-    input.small { display: inline-block; }
+    input.large { display: inline-block; }
+    input.small { display: none; }
 
     
+  }
+
+  @media only screen and (min-width: 1200px){
+      #due_date-input{
+          width: auto;
+      }
   }
   button:focus{
     outline: none;
