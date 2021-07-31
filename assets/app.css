@@ -59,7 +59,7 @@ input, textarea, button, select {font-family: inherit; color: #495057;}
     color: rgb(54,69,79);
     min-width: 23vw;
     z-index: 1;
-    padding: 30px;
+    padding: 25px 30px 18px 30px;
 }
 
 /* background-image: linear-gradient(to right, #2193b0, #6dd5ed); */
