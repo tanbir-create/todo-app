@@ -264,6 +264,7 @@ select::-webkit-inner-spin-button {
     grid-area: t-text;
     font-size: 1.2rem;
     word-break: break-word;
+    margin-right: 5px;
 
 
 }
