@@ -39,10 +39,10 @@ $(function() {{
         console.log('render');
         let date = moment(i.due_date).format('ddd DD MMM YYYY');
         let today = new Date();
-        today  = (today-(today%10000))/10000;
+        today  = (today-(today%100000))/100000;
 
         let inputDate  = new Date(i.due_date);
-        inputDate = (inputDate-(inputDate%10000))/10000;
+        inputDate = (inputDate-(inputDate%100000))/100000;
         
        
         if((inputDate == today)){
