@@ -341,10 +341,10 @@ select::-webkit-inner-spin-button {
         width: 55%;
     }
     
-    #due_date-input{
+    .due_date-input{
         width: auto;
     }
-    #due_date-input::placeholder{
+    .due_date-input::placeholder{
         font-size: .95rem;
     }
     input.large { display: inline-block; }
@@ -354,7 +354,7 @@ select::-webkit-inner-spin-button {
   }
 
   @media only screen and (min-width: 1200px){
-      #due_date-input{
+      .due_date-input{
           width: auto;
       }
   }
