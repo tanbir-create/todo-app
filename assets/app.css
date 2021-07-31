@@ -68,10 +68,7 @@ input, textarea, button, select {font-family: inherit; color: #495057;}
     color: #495057;
 }
 
-#task-input{
-     
 
-}
 
 
 
@@ -160,11 +157,7 @@ button{
 
 }
 
-button:hover{
-    background-color:aliceblue;
-    color: black;
-    transform: scale(1.02);
-}
+
 
 /* input{
     
@@ -213,7 +206,7 @@ select::-webkit-inner-spin-button {
 
 #task-container{
     width: 69%;
-    font-family: sans-serif;
+
     color:#444444;
 }
 #todo-list{
@@ -260,14 +253,15 @@ select::-webkit-inner-spin-button {
 
 .task-text{
     grid-area: t-text;
-    font-size: 1.5em;
+    font-size: 1.2rem;
     word-break: break-word;
 
 
 }
 .task-date{
     grid-area: date;
-    margin-top: .8rem;
+    margin-top: .625rem;
+    font-size: .8rem;
 }
 .task-category{
     grid-area: category;
@@ -276,6 +270,7 @@ select::-webkit-inner-spin-button {
     vertical-align: middle;
     line-height: inherit; */
     margin-right: 5px;
+    font-size: .9rem;
     /* text-align: right;
     vertical-align: middle; */
     display: flex;
@@ -347,4 +342,19 @@ select::-webkit-inner-spin-button {
     input.small { display: inline-block; }
 
     
+  }
+  button:focus{
+    outline: none;
+    box-shadow: 0 0 5px #008ECC;
+   
+      border: 1px solid #008ECC; 
+  }
+
+  @media (hover: hover) {
+    /* ok to use :hover-based menus */
+    button:hover{
+        background-color:aliceblue;
+        color: black;
+        transform: scale(1.02);
+    }
   }

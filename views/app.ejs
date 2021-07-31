@@ -35,7 +35,7 @@
                     </select>
                     
                     <!-- <label for="due_date">DUE DATsE</label> -->
-                    <input class="input-items place-icon small" type="text" id="due_date-input" name="due_date" placeholder=" Due date      &#xf073;"
+                    <input class="input-items place-icon small" type="text" id="due_date-input" name="due_date" placeholder="   Due date      &#xf073;"
                     onfocus="(this.type='date')"
                     onblur="(this.type='text')">
 
@@ -44,7 +44,7 @@
                     onblur="(this.type='text')">
                 </div>
     
-                <div id="add-task-button"><button  type="submit" value="ADD TASK">ADD TASK</button></div>
+                <div id="add-task-button"><button  type="submit" value="ADD TASK" >ADD TASK</button></div>
                 
             </form>
         </div>
@@ -62,7 +62,7 @@
                            
                             <div class="details <%= i.isCompleted ? 'completedc' : ''%>">
                                 <div class="task-text"><%= i.task %></div>
-                                <div class="task-date"><i class="fas fa-calendar-alt"></i> &nbsp <%= moment(i.due_date).format('ddd DD MMM YYYY') %></div>
+                                <div class="task-date"><i class="fas fa-calendar-alt"> &nbsp;</i> <%= moment(i.due_date).format('ddd DD MMM YYYY') %></div>
                                 <div class="task-category"><%= i.category%></div>
                             </div>
                        
