@@ -37,7 +37,17 @@ $(function() {{
 
     let newTaskDOM = function(i){
         console.log('render');
-        let date = moment(i.due_date).format('ddd DD MMM YYYY')
+        let date = moment(i.due_date).format('ddd DD MMM YYYY');
+        let today = new Date();
+        today  = (today-(today%1000))/1000;
+
+        let inputDate  = new Date(i.due_date);
+        inputDate = (inputDate-(inputDate%1000))/1000;
+        
+       
+        if((inputDate == today)){
+            date = 'Today'
+        }
         return $(`<li id="task-${ i._id}">
  
                     
