@@ -31,8 +31,7 @@ app.post('/new_todo', async (req, res)=>{
             category =  req.body.category
         }
         var due_date = req.body.due_date;
-        
-        if(Array.isArray(req.body.due_date)){
+        if(req.body.due_date[1] == ""){
             due_date = new Date();
         }
         let newTask = await ToDo.create({
