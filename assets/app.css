@@ -2,7 +2,7 @@
 
 html {
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    
     
   }
   ::-webkit-scrollbar {
@@ -10,7 +10,7 @@ html {
 }
 *{
     box-sizing: inherit;
-    -webkit-overflow-scrolling: touch;
+    /* -webkit-overflow-scrolling: touch; */
 }
 
 body {
@@ -47,7 +47,7 @@ input, textarea, button, select {font-family: inherit; color: #495057;}
     border-radius: 15px;
     background-color:#f8f9fa;
     overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
    
 
 }
