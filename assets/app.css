@@ -46,6 +46,7 @@ input, textarea, button, select {font-family: inherit; color: #495057;}
     border-radius: 15px;
     background-color:#f8f9fa;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
    
 
 }
