@@ -48,24 +48,28 @@ input, textarea, button, select {font-family: inherit; color: #495057;}
     background-color:#f8f9fa;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    position: relative;
    
 
 }
 
 #page-heading{
     text-align: center;
-    margin-top: 30px;
+    margin: 0;
     color: rgb(54,69,79);
     min-width: 23vw;
+    z-index: 1;
+    padding: 30px;
 }
 
 /* background-image: linear-gradient(to right, #2193b0, #6dd5ed); */
 
 #input_form{
     width: 90%;
-    
-    
-    /* flex-direction: column; */
+    background-color: #f8f9fa;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 #new-task-form{
@@ -197,7 +201,8 @@ select::-webkit-inner-spin-button {
 
 .line-between{
     margin-top: 1.7rem;
-    width: 80%;
+    margin-bottom: 1.7rem;
+    width: 100%;
     border-bottom: 1.57px solid #b2b7c5;
     
     
