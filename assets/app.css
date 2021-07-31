@@ -122,13 +122,13 @@ input, textarea, button, select {font-family: inherit; color: #495057;}
 }
 
 
-#due_date-input{
+.due_date-input{
     width: 35%;
    cursor: pointer;
   
    /* padding: 0 .625rem; */
 }
-#due_date-input:focus{
+.due_date-input:focus{
     padding: .6rem;
 }
 
