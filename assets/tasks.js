@@ -61,13 +61,14 @@ $(function() {{
 
             success: function(){
                 // $(`#todo-list #task-${data.data.task_id }`).remove();
-                $(this).parent().parent().parent().remove();
+               console.log('deleted')
         
                 
             },error: function(error){
                 console.log(error.responseText);
             }
         })
+        $(this).parent().parent().parent().remove();
     })
 
 
@@ -81,12 +82,13 @@ $(function() {{
             url: `/${id}`,
             context: this,
             success: function(){
-                $(this).parent().siblings('.details').toggleClass('completedc');
+              console.log('completed')  
             
         },error: function(error){
             console.log(error.responseText);
         }
         })
+        $(this).parent().siblings('.details').toggleClass('completedc');
 
     })
 })
