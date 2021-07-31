@@ -15,12 +15,16 @@ app.use(express.static('./assets'));
 app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', function(req, res){
-    ToDo.find({}, (err, allTasks)=>{
-        if(err){console.log(err)}
+    try {
+        let allTasks= await ToDo.find({}).sort('due_date');
+        
         return res.render('app',{
             all_tasks: allTasks
         });
-    })
+    } catch (error) {
+        res.send(error);
+    }
+    
     
 })
 
