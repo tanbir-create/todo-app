@@ -16,6 +16,14 @@ $(function() {{
                     $('#task-container>ul').append(newTask);
 
                     $('#new-task-form')[0].reset();
+                    new Noty({
+                        theme: 'bootstrap-v4',
+                        text: "Task added!",
+                        type: 'success',
+                        layout: 'bottomCenter',
+                        timeout: 300
+                        
+                    }).show();
                     
                 },error: function(error){
                     console.log(error.responseText);
@@ -69,6 +77,14 @@ $(function() {{
             }
         })
         $(this).parent().parent().parent().remove();
+        new Noty({
+            theme: 'bootstrap-v4',
+            text: "Task deleted!",
+            type: 'success',
+            layout: 'topRight',
+            timeout: 300
+            
+        }).show();
     })
 
 
