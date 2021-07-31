@@ -58,7 +58,7 @@ input, textarea, button, select {font-family: inherit; color: #495057;}
 /* background-image: linear-gradient(to right, #2193b0, #6dd5ed); */
 
 #input_form{
-    width: 69%;
+    width: 55%;
     
     
     /* flex-direction: column; */
@@ -205,7 +205,7 @@ select::-webkit-inner-spin-button {
 }
 
 #task-container{
-    width: 69%;
+    width: 55%;
 
     color:#444444;
 }
