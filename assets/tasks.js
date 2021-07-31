@@ -15,7 +15,7 @@ $(function() {{
                     let newTask = newTaskDOM(data.data.task);
                     $('#task-container>ul').append(newTask);
 
-                    $('#new-task-form')[0].reset();
+                    
                     new Noty({
                         theme: 'bootstrap-v4',
                         text: "Task added!",
@@ -29,6 +29,7 @@ $(function() {{
                     console.log(error.responseText);
                 }
             })
+            $('#new-task-form')[0].reset();
         })       
     }
 
