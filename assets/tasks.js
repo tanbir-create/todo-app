@@ -20,7 +20,7 @@ $(function() {{
                         theme: 'bootstrap-v4',
                         text: "Task added!",
                         type: 'success',
-                        layout: 'bottomCenter',
+                        layout: 'topCenter',
                         timeout: 300
                         
                     }).show();
