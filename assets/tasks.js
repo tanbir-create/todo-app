@@ -48,7 +48,7 @@ $(function() {{
         if((inputDate == today)){
             date = 'Today'
         }
-        return $(`<li id="task-${ i._id}">
+        return $(`<li id="<%=i.category%>" class="All">
  
                     
                     <div class="flex-details"><div class="checkbox-div"><input class = "completed-checkbox" type="checkbox"  data-id=${ i._id } ${ i.isCompleted ? "checked" : ""}></div>
