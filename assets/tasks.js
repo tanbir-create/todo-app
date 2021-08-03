@@ -121,6 +121,32 @@ $(function() {{
         $(this).parent().siblings('.details').toggleClass('completedc');
 
     })
+              
+     $('#category-select').on('change', function(){
+        
+        let category_value = (this).options[this.selectedIndex].value;
+        console.log(category_value)
+        const todoslist = $("#todo-list"); 
+       
+        if(category_value === 'All'){
+            
+            $('[class=All]').show();
+        }
+        else{
+         
+                (function(){
+                    $('li').filter(function(){
+                        
+                        return $(this).attr('id')!= category_value;
+                    })
+                    .hide();
+                })();
+
+                $("[id=" + category_value + "]").show();
+            
+        }
+
+    })
 })
 
 
