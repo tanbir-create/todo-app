@@ -54,13 +54,24 @@
             <div class="line-between">
 
             </div>
+            
+             <div>
+                <select name="category" id="category-select">
+                    <option value="All">All</option>                   
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="Grocery">Grocery</option>
+                    <option value="Study">Study</option>
+                    <option value="Misc">Misc</option>
+                </select>
+            </div>
         </div>
     
     
         <div id="task-container">
             <ul id="todo-list">
                 <% for(let i of all_tasks){ %>
-                   <li id="task-<%= i._id %>" >
+                   <li id="<%=i.category%>" class="All">
                           
                             <div class="flex-details"><div class="checkbox-div"><input class = "completed-checkbox" type="checkbox"  data-id=<%= i._id %> <%= i.isCompleted ? "checked" : ""%>></div>
                            
