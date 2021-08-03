@@ -87,7 +87,10 @@ $(function() {{
                 console.log(error.responseText);
             }
         })
-        $(this).parent().parent().parent().remove();
+       let to_delete = $(this).parent().parent().parent();
+        to_delete.slideUp('fast', function(){
+            to_delete.remove();
+        });
         new Noty({
             theme: 'bootstrap-v4',
             text: "Task deleted!",
