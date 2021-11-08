@@ -3,16 +3,23 @@ $(function() {{
    
     let createTask = function(){
         let newTaskForm = $('#new-task-form')
+        let data = newTaskForm.serialize()
         newTaskForm.submit(function(e){
             e.preventDefault();
             $.ajax({
                 type: 'post',
                 url: '/new_todo',
                 
-                data: newTaskForm.serialize(),
+                
                 success: function(data){
                     console.log(data)
-                    let newTask = newTaskDOM(data.data.task);
+                  
+                    
+                },error: function(error){
+                    console.log(error.responseText);
+                }
+            })
+             let newTask = newTaskDOM(data.data.task);
                     $('#task-container>ul').append(newTask);
 
                     
@@ -24,11 +31,6 @@ $(function() {{
                         timeout: 300
                         
                     }).show();
-                    
-                },error: function(error){
-                    console.log(error.responseText);
-                }
-            })
             $('#new-task-form')[0].reset();
         })       
     }
