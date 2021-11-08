@@ -9,7 +9,7 @@ $(function() {{
             $.ajax({
                 type: 'post',
                 url: '/new_todo',
-                data: newTaskForm.serialize()
+                data: newTaskForm.serialize(),
                 
                 success: function(data){
                    let newTask = newTaskDOM(data.data.task);
