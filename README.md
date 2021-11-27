@@ -1,6 +1,6 @@
 # todo-app
 A Todo List using NodeJS expressJs MongoDB ejs jquery
->>Functionalities
+>Functionalities
  *Add a task (set a due date, category)
  *Remove task
 *Mark as completed
