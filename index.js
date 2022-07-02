@@ -28,6 +28,18 @@ app.get('/', async function(req, res){
     
 })
 
+app.get('/all', async function(req, res){
+    try {
+        let allTasks= await ToDo.find({}).sort('due_date');
+        
+        return res.status(200).json(allTasks);
+    } catch (error) {
+        res.send(error);
+    }
+    
+    
+})
+
 app.post('/new_todo', async (req, res)=>{
    try {
        let category = "";
